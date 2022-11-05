@@ -100,6 +100,20 @@ main {
     color: var(--Soft-orange);
     font-size: 30px;
     text-transform: uppercase;
+    position: relative;
+    animation: newFade 3s;
+}
+
+@keyframes newFade {
+    from {
+        top: -50%;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        top: 0;
+    }
 }
 
 .ul-item a {
@@ -124,13 +138,26 @@ main {
 /* ends */
 
 /* lg text */
-.lg-text h1{
+.fade-txt {
+    position: relative;
    color: var(--Very-dark-blue);
    font-weight: var(--fontWeight3);
    font-size: clamp(40px, 4vw, 45px);
    padding-right: 2rem;
+   animation: fadeIn 3s;
 }
-/* ends */
+
+/* animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+/* animation */
 
 /* article */
 .article a {
@@ -142,6 +169,17 @@ main {
     padding: 10px 20px;
     display: inline-block;
     margin-block: 1.2rem;
+    animation: btnFade 8s;
+}
+
+@keyframes btnFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .article a:hover {
@@ -150,8 +188,19 @@ main {
 
 .article p {
    line-height: var(--lineHeight);
+   animation: paragraphFade 5s;
 }
-/* ends */
+
+/* animation */
+@keyframes paragraphFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
 /* bottom */
 .bottom {
